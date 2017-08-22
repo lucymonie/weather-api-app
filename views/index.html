@@ -1,3 +1,8 @@
 {{!< layout/default}}
 
-<span>{{weather}}</span>
+<h1>The weather for London</h1>
+
+<span><img src="{{day0.icon_url}}" alt='weather icon'/> Today: {{day0.fcttext_metric}}</span><br>
+<span><img src="{{day1.icon_url}}" alt='weather icon'/> {{day1.title}}: {{day1.fcttext_metric}}</span><br>
+<span><img src="{{day2.icon_url}}" alt='weather icon'/> {{day2.title}}: {{day2.fcttext_metric}}</span><br>
+<span><img src="{{day3.icon_url}}" alt='weather icon'/> {{day3.title}}: {{day3.fcttext_metric}}</span>

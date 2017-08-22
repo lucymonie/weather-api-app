@@ -29,10 +29,7 @@ server.register(Vision, (err) => {
     method: 'GET',
     handler: (req, reply) => {
       let callback = function(context) {
-        console.log('received context in callback, and it is: ', context);
-        let content = {};
-        content.weather = context.weather;
-        reply.view(`index`, content);
+        reply.view(`index`, context);
       }
 
       weather.get(callback);
