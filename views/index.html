@@ -2,7 +2,17 @@
 
 <h1>The weather for London</h1>
 
-<span><img src="{{day0.icon_url}}" alt='weather icon'/> Today: {{day0.fcttext_metric}}</span><br>
-<span><img src="{{day1.icon_url}}" alt='weather icon'/> {{day1.title}}: {{day1.fcttext_metric}}</span><br>
-<span><img src="{{day2.icon_url}}" alt='weather icon'/> {{day2.title}}: {{day2.fcttext_metric}}</span><br>
-<span><img src="{{day3.icon_url}}" alt='weather icon'/> {{day3.title}}: {{day3.fcttext_metric}}</span>
+<div id="gif">
+  <img src="https://media.giphy.com/media/6Yco9eBvCvdJu/giphy.gif" alt="rain on toadstool" />
+</div>
+
+<div id="text">
+  <img src="{{day0.icon_url}}" alt='weather icon'/>
+    <p>Today: {{day0.fcttext_metric}}</p>
+  <img src="{{day1.icon_url}}" alt='weather icon'/>
+    <p>{{day1.title}}: {{day1.fcttext_metric}}</p>
+  <img src="{{day2.icon_url}}" alt='weather icon'/>
+    <p>{{day2.title}}: {{day2.fcttext_metric}}</p>
+  <img src="{{day3.icon_url}}" alt='weather icon'/>
+    <p>{{day3.title}}: {{day3.fcttext_metric}}</p>
+</div>
