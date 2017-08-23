@@ -1,7 +1,7 @@
 # Weather app for Easle
 An app that displays current local weather plus forecasts for three days
 
-I built this with Node.js, Hapi.js and Handlebars. I opted for Handlebars as it provides lightweight templating, so it seemed a good fit for this task.
+I built this with Node.js, Hapi.js, Handlebars and Materialize. I opted for Handlebars as it provides lightweight templating, so it seemed a good fit for this task.
 
 The project is deployed to heroku:
 https://easle-weather.herokuapp.com/
