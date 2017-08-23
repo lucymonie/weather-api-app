@@ -13,7 +13,6 @@ module.exports.get = (callback) => {
       } else {
         let weatherObj = extractWeather(data);
         let weatherWithUpdatedIcons = updateIconLinks(weatherObj);
-        console.log(weatherWithUpdatedIcons);
         callback(weatherWithUpdatedIcons);
       }
     }
