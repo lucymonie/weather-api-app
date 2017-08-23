@@ -12,7 +12,9 @@ module.exports.get = (callback) => {
         callback({onError: `Weather API did not reply with weather, though status code was ${response.statusCode}`});
       } else {
         let weatherObj = extractWeather(data);
-        callback(weatherObj);
+        let weatherWithUpdatedIcons = updateIconLinks(weatherObj);
+        console.log(weatherWithUpdatedIcons);
+        callback(weatherWithUpdatedIcons);
       }
     }
   })
@@ -25,4 +27,14 @@ let extractWeather = (data) => {
   weatherData.day2 = data.forecast.txt_forecast.forecastday[4];
   weatherData.day3 = data.forecast.txt_forecast.forecastday[6];
   return weatherData;
+}
+
+// I didn't like the default icons so this function replaces the icon set with a nicer one
+let updateIconLinks = (weatherData) => {
+  let newWeatherData = Object.assign({}, weatherData);
+  let keys = Object.keys(newWeatherData);
+  keys.forEach(function (key) {
+    newWeatherData[key].icon_url = newWeatherData[key].icon_url.replace('/k', '/j');
+  });
+  return newWeatherData;
 }
