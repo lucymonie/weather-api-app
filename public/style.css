@@ -1,11 +1,27 @@
-#gif {
-  float: left;
-  width: 40vw;
-  margin-left: 20px;
+/*font-family: 'Roboto Slab', serif;
+font-family: 'Bitter', serif;
+font-family: 'Arvo', serif;*/
+body {
+  font-family: 'Arvo', serif;
 }
 
-#text {
-  float: left;
-  width: 40vw;
-  margin-left: 20px;
+.icon {
+  
+}
+
+.weather-img {
+  height: 70vh;
+}
+
+.gif {
+  /*width: 20vw;*/
+  object-fit: cover;
+}
+
+.text {
+  /*border: 1px red solid;*/
+}
+
+h1 {
+  /*color: blue;*/
 }

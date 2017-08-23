@@ -1,18 +1,53 @@
 {{!< layout/default}}
 
-<h1>The weather for London</h1>
+<div class="container">
+  <div class="row">
+    <h1>London weather.</h1>
+  </div>
 
-<div id="gif">
-  <img src="https://media.giphy.com/media/6Yco9eBvCvdJu/giphy.gif" alt="rain on toadstool" />
-</div>
+  <div class="row">
+    <div class="col s12 m12 l12 text">
+      <div class="row">
+        <div class="col s2">
+          <img class="icon" src="{{day0.icon_url}}" alt='weather icon'/>
+        </div>
+        <div class="col s10">
+          <h5>Today</h5>
+          <p>{{day0.fcttext_metric}}</p>
+        </div>
+      </div>
 
-<div id="text">
-  <img src="{{day0.icon_url}}" alt='weather icon'/>
-    <p>Today: {{day0.fcttext_metric}}</p>
-  <img src="{{day1.icon_url}}" alt='weather icon'/>
-    <p>{{day1.title}}: {{day1.fcttext_metric}}</p>
-  <img src="{{day2.icon_url}}" alt='weather icon'/>
-    <p>{{day2.title}}: {{day2.fcttext_metric}}</p>
-  <img src="{{day3.icon_url}}" alt='weather icon'/>
-    <p>{{day3.title}}: {{day3.fcttext_metric}}</p>
+      <div class="row">
+        <div class="col s2">
+          <img class="icon" src="{{day1.icon_url}}" alt='weather icon'/>
+        </div>
+        <div class="col s10">
+          <h5>{{day1.title}}</h5>
+          <p>{{day1.fcttext_metric}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <img class="icon" src="{{day2.icon_url}}" alt='weather icon'/>
+        </div>
+        <div class="col s10">
+          <h5>{{day2.title}}</h5>
+          <p>{{day2.fcttext_metric}}</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <img class="icon" src="{{day3.icon_url}}" alt='weather icon'/>
+        </div>
+        <div class="col s10">
+          <h5>{{day3.title}}</h5>
+          <p>{{day3.fcttext_metric}}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

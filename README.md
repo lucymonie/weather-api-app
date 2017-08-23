@@ -12,5 +12,5 @@ https://easle-weather.herokuapp.com/
 - Request api key from repository owner
 - Add `export WEATHER_KEY=[weather key]` to `config.env`
 - Run `npm install`
-- Run 'npm start'
+- Run `npm start`
 - Open browser at `localhost:8080`
