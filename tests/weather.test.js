@@ -1,5 +1,6 @@
 const test = require('tape');
 const weather = require('../src/weather.js');
+const server = require('../src/server.js');
 
 let mockWeatherData = { response:
   { version: '0.1',
@@ -147,4 +148,23 @@ test('It can update the image urls to include the letter j rather than the lette
   let updatedWeatherObject = weather.updateIconLinks(mockWeatherObject);
   t.deepEqual(updatedWeatherObject, mockUpdatedWeatherObject);
   t.end();
+});
+
+test('Check if server is running', function (t) {
+  server.start(err => {
+    t.error(err);
+    server.stop();
+    t.end();
+  });
+});
+
+test('Check successful route & handling', function(t) {
+  var options = {
+    method: 'GET',
+    url: '/'
+  };
+  server.inject(options, (res) => {
+    t.equal(res.statusCode, 200, 'status code is 200');
+    t.end();
+  });
 });
