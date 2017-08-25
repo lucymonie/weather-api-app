@@ -6,7 +6,7 @@ I built this with Node.js, Hapi.js, Handlebars and Materialize. I opted for Hand
 The project is deployed to heroku:
 https://easle-weather.herokuapp.com/
 
-**To run locally**
+**To run files locally**
 - Clone the repository
 - Create a file `config.env` in the root directory
 - Request api key from repository owner
@@ -15,6 +15,6 @@ https://easle-weather.herokuapp.com/
 - Run `npm start`
 - Open browser at `localhost:8080`
 
-**Tests**
-There are a couple of tests written in Tape.
+**To run tests**  
+There are some tests written with Tape.
 - To run tests, use the command `npm test`
