@@ -4,7 +4,7 @@
   "description": "Weather api app for Easle",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node ./tests/weather.test.js",
     "start": "node index.js",
     "watch": "nodemon index.js -e js,html,css"
   },
@@ -18,6 +18,16 @@
     "url": "https://github.com/lucymonie/weather-api-app/issues"
   },
   "homepage": "https://github.com/lucymonie/weather-api-app#readme",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-semistandard": "^7.0.0",
+    "eslint-config-standard": "^6.2.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-react": "^6.7.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "eslint-plugin-node": "^4.2.2",
+    "istanbul": "^0.4.5"
+  },
   "dependencies": {
     "env2": "^2.2.0",
     "handlebars": "^4.0.6",
@@ -25,6 +35,7 @@
     "inert": "^4.1.0",
     "nodemon": "^1.11.0",
     "request": "^2.79.0",
+    "tape": "^4.6.3",
     "vision": "^4.1.1"
   },
   "engines": {

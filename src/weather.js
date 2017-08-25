@@ -11,15 +11,15 @@ module.exports.get = (callback) => {
       if(!data.forecast.simpleforecast.forecastday[0].conditions) {
         callback({onError: `Weather API did not reply with weather, though status code was ${response.statusCode}`});
       } else {
-        let weatherObj = extractWeather(data);
-        let weatherWithUpdatedIcons = updateIconLinks(weatherObj);
+        let weatherObj = this.extractWeather(data);
+        let weatherWithUpdatedIcons = this.updateIconLinks(weatherObj);
         callback(weatherWithUpdatedIcons);
       }
     }
   })
 }
 
-let extractWeather = (data) => {
+module.exports.extractWeather = (data) => {
   let weatherData = {}
   weatherData.day0 = data.forecast.txt_forecast.forecastday[0];
   weatherData.day1 = data.forecast.txt_forecast.forecastday[2];
@@ -29,7 +29,7 @@ let extractWeather = (data) => {
 }
 
 // I didn't like the default icons so this function replaces the icon set with a nicer one
-let updateIconLinks = (weatherData) => {
+module.exports.updateIconLinks = (weatherData) => {
   let newWeatherData = Object.assign({}, weatherData);
   let keys = Object.keys(newWeatherData);
   keys.forEach(function (key) {
