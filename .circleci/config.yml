@@ -7,7 +7,7 @@ jobs:
        - checkout
        - run:
           name: update-npm
-          command: 'sudo npm install -g node:latest-browsers'
+          command: 'sudo npm install -g'
        - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
        - save_cache:
