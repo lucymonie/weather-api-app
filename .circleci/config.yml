@@ -1,0 +1,8 @@
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/javascript:6.9.5
+     steps:
+       - checkout
+       - run: echo "hello world"
