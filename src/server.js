@@ -28,7 +28,7 @@ server.register(Vision, (err) => {
     path:'/',
     method: 'GET',
     handler: (req, reply) => {
-      let callback = function(context) {
+      var callback = function(context) {
         reply.view(`index`, context);
       }
 

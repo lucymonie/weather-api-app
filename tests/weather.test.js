@@ -1,7 +1,7 @@
-const test = require('tape');
-const weather = require('../src/weather.js');
+var test = require('tape');
+var weather = require('../src/weather.js');
 
-let mockWeatherData = { response:
+var mockWeatherData = { response:
   { version: '0.1',
      termsofService: 'http://www.wunderground.com/weather/api/d/terms.html',
      features: { forecast: 1 } },
@@ -68,7 +68,7 @@ let mockWeatherData = { response:
    },
  simpleforecast: { forecastday: [Array] } } }
 
-let mockWeatherObject = {
+var mockWeatherObject = {
   day0:
    { period: 0,
      icon: 'partlycloudy',
@@ -102,7 +102,7 @@ let mockWeatherObject = {
      fcttext_metric: 'Sunny. Very warm. High 27C. Winds S at 10 to 15 km/h.',
      pop: '10' } }
 
-let mockUpdatedWeatherObject = {
+var mockUpdatedWeatherObject = {
    day0:
     { period: 0,
       icon: 'partlycloudy',
@@ -138,13 +138,13 @@ let mockUpdatedWeatherObject = {
 
 
 test('It can extract a subset of the data from parsed response object', function (t) {
- let weatherObj = weather.extractWeather(mockWeatherData);
+ var weatherObj = weather.extractWeather(mockWeatherData);
  t.deepEqual(weatherObj, mockWeatherObject);
  t.end();
 });
 
 test('It can update the image urls to include the letter j rather than the letter k', function (t) {
-  let updatedWeatherObject = weather.updateIconLinks(mockWeatherObject);
+  var updatedWeatherObject = weather.updateIconLinks(mockWeatherObject);
   t.deepEqual(updatedWeatherObject, mockUpdatedWeatherObject);
   t.end();
 });

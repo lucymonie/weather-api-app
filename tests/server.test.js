@@ -1,5 +1,5 @@
-const test = require('tape');
-const server = require('../src/server.js');
+var test = require('tape');
+var server = require('../src/server.js');
 
 test('Check if server is running', function (t) {
   server.start(err => {
