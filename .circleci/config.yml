@@ -10,9 +10,6 @@ jobs:
           command: 'sudo npm install -g npm@latest'
        - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-       - run:
-          name: install-process-nextick-args
-          command: 'npm install --save process-nextick-args'
        - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
