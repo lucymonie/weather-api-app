@@ -2,7 +2,7 @@ const request = require('request');
 const env = require('env2')('./config.env');
 
 module.exports.get = (callback) => {
-  var url = `http://api.wunderground.com/api/${process.env.WEATHER_KEY}/forecast/lang:EN/q/UK/London.json`;
+  var url = 'http://api.wunderground.com/api/' + process.env.WEATHER_KEY + '/forecast/lang:EN/q/UK/London.json';
   request(url, (err, response, body) => {
     if (err || response.statusCode !== 200) {
       callback({onError:`There was a problem with the API request, status code was ${response.statusCode}`});
