@@ -12,7 +12,7 @@ jobs:
           command: 'sudo npm install -g npm@latest'
        - run:
           name: install-dependencies
-          command: 'npm install'
+          command: 'pwd && ls && npm install'
        - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
