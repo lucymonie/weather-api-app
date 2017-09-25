@@ -7,9 +7,9 @@ jobs:
        - checkout
        - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
-       - run:
-          name: update-npm
-          command: 'sudo npm install -g npm@5.4.1'
+      #  - run:
+      #     name: update-npm
+      #     command: 'sudo npm install -g npm@5.4.1'
        - run:
           name: install-dependencies
           command: 'pwd && ls && npm -v && npm install'
