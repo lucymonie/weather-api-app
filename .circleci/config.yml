@@ -10,6 +10,9 @@ jobs:
        - run:
           name: update-npm
           command: 'sudo npm install -g npm@latest'
+       - run:
+          name: install-dependencies
+          command: 'npm install'
        - save_cache:
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
