@@ -3,6 +3,8 @@ jobs:
    build:
      docker:
        - image: circleci/node:7.10.0
+       environment:
+          WEATHER_KEY: WEATHER_KEY
      steps:
        - checkout
        - restore_cache:
